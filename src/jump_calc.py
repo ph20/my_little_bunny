@@ -12,7 +12,7 @@ def read_data(path):
 
 
 def write_result(path, result):
-    with open(path) as _:
+    with open(path, 'w') as _:
         _.write(str(result))
 
 
@@ -29,7 +29,6 @@ def main():
     one_jump, length = read_data(INPUT_NAME)
     combinations = graph_vars(one_jump, length)
     write_result(OUTPUT_NAME, combinations)
-    return combinations
 
 
 if __name__ == '__main__':
